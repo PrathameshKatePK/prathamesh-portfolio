@@ -42,18 +42,18 @@ useEffect(() => {
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border-b border-white/20 dark:border-gray-700 shadow-lg">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         
         {/* Logo */}
         <a
-          href="#hero"
-          className="text-2xl font-bold text-blue-600"
-        >
-         <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-  PK
-</span>
-        </a>
+  href="#hero"
+  className="transition-transform duration-300 hover:scale-110"
+>
+  <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+    PK
+  </span>
+</a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -64,22 +64,20 @@ useEffect(() => {
   className="relative py-2 font-medium"
 >
   <span
-    className={`transition-colors ${
-      activeSection === link.id
-        ? "text-blue-600"
-        : "hover:text-blue-600"
-    }`}
-  >
-    {link.name}
-  </span>
+  className={`transition-colors duration-300 ${
+    activeSection === link.id
+      ? "text-blue-600 dark:text-blue-400 font-semibold"
+      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+  }`}
+>
+  {link.name}
+</span>
 
-  <span
-    className={`absolute left-0 bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-      activeSection === link.id
-        ? "w-full"
-        : "w-0"
-    }`}
-  />
+ <span
+  className={`absolute left-0 bottom-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 ${
+    activeSection === link.id ? "w-full" : "w-0"
+  }`}
+/>
 </a>
           ))}
 
@@ -97,12 +95,16 @@ useEffect(() => {
         </nav>
 
         {/* Mobile Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+       <div className="flex items-center gap-3 md:hidden">
+  <ThemeToggle />
+
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    aria-label="Toggle Menu"
+  >
+    {isOpen ? <X /> : <Menu />}
+  </button>
+</div>
       </div>
 
       {/* Mobile Menu */}
@@ -113,8 +115,7 @@ useEffect(() => {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
+className="block px-6 py-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"            >
               {link.name}
             </a>
           ))}

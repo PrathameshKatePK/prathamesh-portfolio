@@ -5,18 +5,13 @@ export const contact = {
   socials: [
     { 
       name: "GitHub", 
-      url: "https://github.com/prathameshkate", // Replace with your actual username
+       url: "https://github.com/PrathameshKatePK", // Replace with your actual username
       icon: "Github" 
     },
     { 
       name: "LinkedIn", 
-      url: "https://linkedin.com/in/prathameshkate", // Replace with your actual username
+      url: "https://www.linkedin.com/in/prathamesh-kate-126243250", // Replace with your actual username
       icon: "Linkedin" 
-    },
-    { 
-      name: "Twitter", 
-      url: "https://twitter.com/yourusername", // Optional
-      icon: "Twitter" 
     }
   ]
 };   

@@ -10,7 +10,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 const iconMap = {
   Github: <FaGithub className="w-6 h-6" />,
   Linkedin: <FaLinkedin className="w-6 h-6" />,
-  Twitter: <FaTwitter className="w-6 h-6" />,
+ 
 };
 
 export default function Contact() {
