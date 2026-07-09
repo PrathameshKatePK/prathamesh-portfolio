@@ -5,6 +5,7 @@ import { contact } from "../../data/contact";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import FadeIn from "../common/FadeIn";
 
 // Social Icon Mapping
 const iconMap = {
@@ -70,16 +71,20 @@ export default function Contact() {
 
         {/* Header */}
         <div className="text-center mb-16">
+            <FadeIn>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Get In Touch
           </h2>
-
+</FadeIn>
+ <FadeIn delay={0.2}>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Have a project in mind or want to discuss an opportunity?
           </p>
+          </FadeIn>
         </div>
 
         {/* Contact Cards */}
+        <FadeIn delay={0.4}>
         <div className="grid md:grid-cols-3 gap-6 mb-12">
 
           <a
@@ -113,7 +118,7 @@ export default function Contact() {
           </div>
 
         </div>
-
+</FadeIn>
         {/* Contact Form */}
 
 <div className="max-w-3xl mx-auto">
@@ -193,7 +198,7 @@ export default function Contact() {
         </div>
 </div>
         {/* Social Links */}
-
+<FadeIn delay={0.6}>
         <div className="flex justify-center gap-6">
 
           {contact.socials.map((social) => (
@@ -209,7 +214,7 @@ export default function Contact() {
           ))}
 
         </div>
-
+</FadeIn>
       </div>
     </section>
   );

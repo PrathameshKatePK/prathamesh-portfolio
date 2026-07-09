@@ -1,5 +1,6 @@
 import { projects } from '../../data/projects';
 import { GitFork, ExternalLink } from 'lucide-react';
+import FadeIn from "../common/FadeIn";
 
 export default function Projects() {
   return (
@@ -8,15 +9,20 @@ export default function Projects() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
+          <FadeIn>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Featured Projects
           </h2>
+          </FadeIn>
+          <FadeIn delay={0.2}>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
             A selection of my recent work, featuring web applications and interactive experiences.
           </p>
+          </FadeIn>
         </div>
 
-        {/* Projects Grid */}
+        {/* Proje cts Grid */}
+        <FadeIn delay={0.4}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
@@ -73,6 +79,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { ArrowDown } from 'lucide-react';
 import profileImg from '../../assets/images/Prathamesh_profile_2.jpeg';
+import FadeIn from "../common/FadeIn";
 
 export default function Hero() {
   return (
@@ -14,15 +15,18 @@ export default function Hero() {
       </div>
 
       {/* Main Heading */}
+      <FadeIn>
       <h1 className="text-5xl md:text-7xl font-bold mb-4">
         Hi, I'm <span className="text-blue-600">Prathamesh</span>
       </h1>
+      </FadeIn>
       
       {/* Subheading */}
+      <FadeIn delay={0.2}>
       <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
         A Frontend Developer building modern, responsive, and user-friendly web experiences.
       </p>
-
+</FadeIn>
       {/* Call to Action Buttons */}
       <div className="flex gap-4 mb-12">
         <a 
