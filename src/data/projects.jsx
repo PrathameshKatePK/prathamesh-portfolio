@@ -55,7 +55,7 @@ export const projects = [
     title: "Learn Hub",
     description:
       "A learning management system designed to provide an organized and engaging online learning experience.",
-    tags: ["React", "Learning Management System"],
+    tags: ["React", "Learning Management System","Spring Boot","MySQL","JWT"],
     github: "https://github.com/PrathameshKatePK/learnhub-lms",
     link: "",
     image: learnHubImg,
