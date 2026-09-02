@@ -1,6 +1,7 @@
 import portfolioImg from "../assets/images/portfolio.png";
 import weatherImg from "../assets/images/weather-app.webp";
 import ecommerceImg from "../assets/images/ecommerce.jpg";
+import learnHubImg from "../assets/images/Lernhub.png";
 
 export const projects = [
   {
@@ -48,5 +49,15 @@ export const projects = [
     github: "https://github.com/PrathameshKatePK/E-commerce-Project",
     link: "",
     image: ecommerceImg,
+  },
+
+  {
+    title: "Learn Hub",
+    description:
+      "A learning management system designed to provide an organized and engaging online learning experience.",
+    tags: ["React", "Learning Management System"],
+    github: "https://github.com/PrathameshKatePK/learnhub-lms",
+    link: "",
+    image: learnHubImg,
   },
 ];
